@@ -1,0 +1,277 @@
+.viewProfile{
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-top: 8%;
+    font-family: sans-serif;
+}
+
+.profile{
+    width: 18%;
+    height: 60vh;
+    border: 3px solid #0b84af;
+    border-radius: 5px;
+    text-align: center;
+    font-family:sans-serif;
+    background-color: white;
+    padding: 2px;
+    border-radius: 4px;
+    font-family: sans-serif;
+}
+
+.profileImg{
+    display: flex;
+    width: 100%;
+    height: 50%;
+    justify-content: center;
+    align-items: center;
+    border-bottom: 1.5px solid #0b84af;
+}
+
+.profileImg img{
+    width: 80%;
+    height: 80%;
+    border-radius: 50%;
+    border: 1.5px solid #0b84af;
+}
+
+.profile p{
+    height: 3%;
+    width: 100%;
+}
+
+.optionsHolder{
+    width: 100%;
+}
+
+.userPosts{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    width: 60%;
+    font-family: sans-serif;
+}
+
+.post{
+    width: 100%;
+    height: 28vh;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    background-color: white;
+    border-bottom: 1px solid black;
+}
+
+.postImg{
+    width: 20%;
+    height: 60%;
+    border-radius: 25%;
+}
+
+.postInfo{
+    width: 50%;
+}
+
+.postImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 25%;
+}
+
+.options{
+    width: 20%;
+}
+
+.options p{
+    cursor: pointer;
+}
+
+.navigate{
+    display: flex;
+    width: 100%;
+    background-color: white;
+    justify-content: space-evenly;
+    align-items: flex-start;
+    border-bottom: 2px solid black;
+    border-radius: 6px;
+}
+
+.navigate h1{
+    margin-top: 0%;
+    text-align: center;
+    height: 100%;
+}
+
+.unClick{
+    width: 48%;
+    cursor: pointer;
+}
+
+.click{
+    width: 48%;
+    cursor: pointer;
+    border-right: 1px solid black;
+    background-color: #0b84af;
+}
+.sendMessage{
+    width: 50%;
+}
+.sendMessage textarea{
+    width: 70%;
+    border-radius: 5px;
+    border: 2px solid #0b84af;
+    resize: none;
+}
+
+.sendMessage button{
+    border: 2px solid #0b84af;
+    background-color: #0b83af00;
+    color: #0b84af;
+    width: 30%;
+    border-radius: 5px;
+    padding: 4px;
+    cursor: pointer;
+}
+.goBack{
+    margin-left: 1%;
+    cursor: pointer;
+}
+.messages{
+    margin-top: .5%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    width: 99.5%;
+    border: 2px solid #0b84af;
+    border-radius: 5px;
+    cursor: pointer;
+    background-color: white;
+}
+
+.messages img{
+    width: 8%;
+    height: 70%;
+    border-radius: 50%;
+    margin-left: 2%;
+}
+
+.messages p{
+    width: 20%;
+}
+
+.messageRead{
+    margin-top: .5%;
+    height: 12vh;
+    display: flex;
+    align-items: center;
+    width: 99.5%;
+    border: 2px solid black;
+    border-radius: 5px;
+    background-color: #0b84af;
+    cursor: pointer;
+}
+
+.messageRead img{
+    width: 8%;
+    border-radius: 50%;
+    margin-left: 2%;
+}
+
+.messageRead p{
+    width: 20%;
+}
+
+
+.chatHolder{
+    height: 70vh;
+    width: 59vw;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    border: 2px solid #0b84af;
+    border-radius:5px ;
+    overflow: auto;
+    margin-top: .5%;
+}
+
+.chat{
+    display: flex;
+    width: 95%;
+    margin-top: 2%;
+}
+
+.chatUser{
+    height: 15vh;
+    width: 80%;
+    display: flex;
+    justify-content: space-between;
+    margin-left: 2%;
+    border-radius:10px ;
+    background-color: rgb(219, 219, 219);
+    font-family: sans-serif;
+}
+
+.chatUser p:nth-child(1){
+    width: 40%;
+    margin-left: 2%;
+    text-align: start;
+}
+
+.chatUser p:nth-child(2){
+    width: 40%;
+    text-align: end;
+    margin-right: 2%;
+}
+
+.chat img{
+    width: 15%;
+    border-radius: 50%;
+}
+
+.chats form{
+    height: 10vh;
+    margin-top: 2%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid #0b84af;
+}
+
+.chats form textarea{
+    resize: none;
+    width: 30%;
+    border: 2px solid #0b84af;
+    border-radius: 5px;
+}
+
+.chats form button{
+    border: 2px solid #0b84af;
+    width: 10%;
+    border-radius: 5px;
+    height: 60%;
+    margin-left: 1%;
+}
+
+@media screen and (max-width:1024px) {
+    .viewProfile{
+        margin-top: 14%;
+    }
+  }
+
+  @media screen and (max-width:425px) {
+    .viewProfile{
+        margin-top: 28%;
+    }
+    .profile{
+        width: 60%;
+        height: 40vh;
+    }
+    .userPosts{width: 95%;margin-top: 2%;}
+    .navigate{height: 8vh;}
+    .chatHolder{width: 95vw;}
+    .chats form textarea{width: 40%;}
+    .chats form button{width: 20%;height: 40%;}
+  }

@@ -1,0 +1,284 @@
+.App {
+  text-align: center;
+}
+
+.nav{
+  position: fixed;
+  color: whitesmoke;
+  width: 100%;
+  height: 10vh;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: rgba(0, 0, 0, 0.863);
+  border-bottom: 3px solid #0b84af;
+  top: 0%;
+  z-index: 1;
+  font-family: sans-serif;
+}
+
+.hamburger{
+  display: none;
+}
+
+.links{
+  margin-left: 2%;
+  width: 30%;
+  display: flex;
+  align-items: flex-end;
+  justify-content: space-evenly;
+  margin-bottom: .1%;
+}
+
+.links a{
+  text-decoration: none;
+  font-size: large;
+  font-weight: 500;
+  color: whitesmoke;
+  transition: .3s;
+}
+
+.links a:hover{
+  color:#0b84af
+}
+
+.search{
+  position: relative;
+  margin-left: 25%;
+  width: 30%;
+  color: whitesmoke;
+  margin-bottom: .1%;
+}
+
+.search input{
+  width: 50%;
+  background-color: rgba(241, 241, 241, 0);
+  border: 0px solid rgba(245, 245, 220, 0);
+  border-bottom: 2px solid whitesmoke ;
+  border-radius: 2px;
+  font-size: medium;
+  font-family: sans-serif;
+  color: whitesmoke;
+}
+
+.search input::placeholder{
+  color: whitesmoke ;
+  font-size: medium;
+}
+
+.search button{
+  border: 2.5px inset whitesmoke;
+  border-radius: 5px;
+  color: whitesmoke;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: medium;
+  transition: .3s;
+  cursor: pointer;
+}
+
+.search button:hover{
+  border: 2.5px inset #0b84af;
+  border-radius: 5px;
+  color: #0b84af;
+  background-color: rgba(0, 0, 0, 0);
+  font-size: medium;
+}
+
+.searchCon{
+  position: absolute;
+  background-color: whitesmoke;
+  width: 51.8%;
+  left: 15%;
+  background-color: rgba(0, 0, 0, 0.863);
+  border: 1px solid black;
+}
+
+.searchUser{
+  position: relative;
+  display: flex;
+  width: 100%;
+  height: 8vh;
+  align-items: center;
+  text-decoration: none;
+  color: whitesmoke;
+  border-bottom: 2px inset whitesmoke;
+  transition: .5s;
+}
+
+.searchUser:hover{
+  border-bottom: 2px inset #0b84af;
+}
+
+.searchUser a{
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.searchUser p{
+  width: 60%;
+  margin-left: 5%;
+  text-align: left;
+  font-size: medium;
+  transition: .2s;
+}
+
+.searchUser p:hover{
+  color: #0b84af;
+}
+
+.searchUserImg{
+    width: 20%;
+}
+
+.searchUserImg img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+
+.user{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 14%;
+  height: 90%;
+  margin-bottom: .1%;
+}
+
+.online{
+  position: absolute;
+  width: 5%;
+  top: .1%;
+  text-align: center;
+  color: whitesmoke;
+}
+
+.isLogin{
+  position: absolute;
+  height: 10%;
+  width: 7%;
+  top: 5%;
+  left: 35%;
+  border-radius: 50%;
+  background-color: rgb(0, 240, 12);
+}
+
+.optionsBtn{
+  height:20%;
+  margin-left: 30%;
+  background-color: rgba(0, 0, 0, 0.863);
+  cursor: pointer;
+}
+
+.userImgDiv{
+  height: 90%;
+  width: 60%;
+  margin-top: 0%;
+  background-color: whitesmoke;
+  border-radius: 50%;
+}
+
+.userImgDiv img{
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+}
+
+.options{
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.877);
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.877);
+  color: whitesmoke;
+  top: 108%;
+  z-index: 1;
+}
+
+.option{
+  height: 33%;
+  transition: .4s;
+  border-bottom: 1px solid rgba(245, 245, 245, 0);
+  border-top: 1px solid rgba(245, 245, 245, 0);
+  cursor: pointer;
+  color: whitesmoke;
+}
+
+.option:hover{
+  transform: scale(1.02);
+  color: #0b84af;
+  border-bottom: 1px solid whitesmoke;
+  border-top: 1px solid whitesmoke;
+}
+
+.option:nth-child(3):hover{
+  border-bottom: 1px solid rgba(245, 245, 245, 0);
+}
+
+.option:nth-child(4) img{
+  font-size: 10px;
+  border: 1px solid whitesmoke;
+} 
+
+@media screen and (max-width:1024px) {
+  .links{width: 35%;justify-content: space-between;}
+  .online{
+    font-size: medium;
+  }
+  .user{
+    width: 20%;
+    margin-right: 2%;
+  }
+  .search{
+    width: 30%;
+    margin-left: 0%;
+  }
+}
+
+@media screen and (max-width:768px) {
+  .links{width: 45%;justify-content: space-between;}
+}
+
+@media screen and (max-width:425px) {
+  .nav{
+    justify-content: space-around;  
+  }
+  .user{
+    width: 35%;
+    margin-right: 2%;
+  }
+  .online{
+    font-size: medium;
+  }
+  .hamburger{
+    display: block;
+    margin-left: 0%;
+    cursor: pointer;
+  }
+  .search{
+    width: 45%;
+    margin-left: 0%;
+  }
+  .links{
+    position: absolute;
+    width: 18%;
+    display: flex;
+    flex-direction: column;
+    border: 1px solid whitesmoke;
+    top: 100%;
+    left: 0%;
+    transition: .5s;
+    z-index: 2;
+    background-color: black;
+    transform: skew(10px);
+  }
+  .links a{
+    width: 100%;
+    text-align: left;
+  }
+}

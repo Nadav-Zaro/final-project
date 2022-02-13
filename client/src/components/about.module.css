@@ -1,0 +1,60 @@
+.about{
+    position: relative;
+    top: 0%;
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(-20deg,rgba(0, 0, 0, 0.61),rgba(255, 255, 255, 0),rgba(255, 255, 255, 0));
+    z-index: -3;
+}
+
+.intro{
+    position: relative;
+    width: 60%;
+    height: 70%;
+    background: linear-gradient(-30deg,rgba(0, 0, 0, 0.61),white,white);
+    margin-top: 10%;
+    margin-left: 10%;
+    z-index: -2;
+}
+
+.intro img{
+    position: absolute;
+    width: 40%;
+    top: 0%;
+    left: 2%;
+    z-index: -1;
+}
+
+.aboutText{
+    position: absolute;
+    transform: scale(1.05);
+    background-color: rgba(245, 245, 245, 0.349);
+    top: 18%;
+    left: 40%;
+}
+
+@media screen and (max-width:1024px) {
+    .intro{
+        margin-top: 14%;
+        width: 90%;
+        margin-left: 5%;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .intro{
+        margin-top: 18%;
+        width: 100%;
+        margin-left: 0%;
+    }
+  }
+  
+  @media screen and (max-width:425px) {
+    .intro{
+        margin-top: 35%;
+        width: 100%;
+        margin-left: 0%;
+    }
+    .aboutText{left: 35%;width: 60%;}
+    .intro img{width: 40%;height: 40%;}
+  }

@@ -1,0 +1,76 @@
+.games{
+    width: 40%;
+    margin-top: 2%;
+}
+
+.game{
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
+    justify-content: space-evenly;
+    align-items: center;
+    border: 3px solid #0b84af;
+    background-color: white;
+    padding: 2px;
+    border-radius: 5px;
+    margin-top: 1%;
+    font-weight: 500;
+}
+
+.home{
+    width: 30%;
+}
+
+.away{
+    width: 30%;
+}
+
+.score{
+    width: 20%;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.game table{
+    width: 90%;
+    border-top: 1px solid #0b84af;
+    border-collapse: collapse;
+    font-size: medium;
+}
+
+.game table th{
+    text-align: left;
+}
+
+.playerOne{
+    width: 100%;
+    display: flex;
+}
+
+.playerTwo{
+    width: 100%;
+    display: flex;
+}
+
+.playerOne img{
+    width: 20%;
+    
+}
+
+.playerTwo img{
+    width: 20%;
+}
+
+.stateTr{
+    width: 100%;
+    border-bottom: 1px solid #0b84af;
+}
+
+@media screen and (max-width:425px) {
+    .games{
+        /* position: absolute; */
+        width: 90%;
+        /* top: 75%; */
+        /* left: 57%; */
+    }
+  }

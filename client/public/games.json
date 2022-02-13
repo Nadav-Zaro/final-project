@@ -1,0 +1,187 @@
+[
+  {
+    "score": ["141", "119"],
+    "home": [
+      "Hornets",
+      "29-28",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/cha.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "away": [
+      "Pistons",
+      "12-44",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/det.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "playerOne": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/1630163.png",
+      "LaMelo Ball",
+      "31",
+      "5",
+      "12"
+    ],
+    "playerTwo": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/1630180.png",
+      "Saddiq Bey",
+      "25",
+      "4",
+      "3"
+    ]
+  },
+  {
+    "score": ["120", "113"],
+    "home": [
+      "Cavaliers",
+      "35-21",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/cle.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "away": [
+      "Pacers",
+      "19-38",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/ind.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "playerOne": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/1628386.png",
+      "Jarrett Allen",
+      "22",
+      "14",
+      "1"
+    ],
+    "playerTwo": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/1627741.png",
+      "Buddy Hield",
+      "16",
+      "9",
+      "8"
+    ]
+  },
+  {
+    "score": ["87", "100"],
+    "home": ["Thunder", "17-38"],
+    "away": [
+      "76ers",
+      "33-22",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/phi.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "playerOne": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/1629647.png",
+      "Darius Bazley",
+      "14",
+      "15",
+      "1"
+    ],
+    "playerTwo": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/203954.png",
+      "Joel Embiid",
+      "25",
+      "19",
+      "4"
+    ]
+  },
+  {
+    "score": ["136", "121"],
+    "home": [
+      "Spurs",
+      "21-35",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/sa.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "away": [
+      "Hawks",
+      "26-29",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/atl.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "playerOne": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/1627749.png",
+      "Dejounte Murray",
+      "32",
+      "10",
+      "15"
+    ],
+    "playerTwo": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/1629027.png",
+      "Trae Young",
+      "18",
+      "4",
+      "11"
+    ]
+  },
+  {
+    "score": ["102", "108"],
+    "home": [
+      "Nuggets",
+      "30-25",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/den.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "away": [
+      "Celtics",
+      "32-25",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/bos.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "playerOne": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/203999.png",
+      "Nikola Jokic",
+      "23",
+      "16",
+      "11"
+    ],
+    "playerTwo": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/1628369.png",
+      "Jayson Tatum",
+      "24",
+      "6",
+      "5"
+    ]
+  },
+  {
+    "score": ["122", "134"],
+    "home": [
+      "Timberwolves",
+      "29-27",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/min.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "away": [
+      "Bulls",
+      "35-21",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/chi.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "playerOne": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/1630162.png",
+      "Anthony Edwards",
+      "31",
+      "6",
+      "8"
+    ],
+    "playerTwo": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/201942.png",
+      "DeMar DeRozan",
+      "35",
+      "6",
+      "6"
+    ]
+  },
+  {
+    "score": ["99", "114"],
+    "home": [
+      "Magic",
+      "13-44",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/orl.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "away": [
+      "Jazz",
+      "35-21",
+      "https://a.espncdn.com/combiner/i?img=/i/teamlogos/nba/500/utah.png&scale=crop&cquality=40&location=origin&w=80&h=80"
+    ],
+    "playerOne": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/1628976.png",
+      "Wendell Carter Jr.",
+      "22",
+      "9",
+      "2"
+    ],
+    "playerTwo": [
+      "https://cdn.nba.com/headshots/nba/latest/260x190/202355.png",
+      "Hassan Whiteside",
+      "15",
+      "18",
+      "1"
+    ]
+  }
+]

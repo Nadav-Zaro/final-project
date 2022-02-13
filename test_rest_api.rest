@@ -1,0 +1,133 @@
+GET http://localhost:5000/UserDetails
+
+
+### 
+
+
+GET http://localhost:5000/UserDetails/TEmdIbg9f8Vt0ErEi0pZmtMPDHD3
+
+
+### 
+
+
+POST http://localhost:5000/UserDetails
+Content-Type: "application/json"
+
+
+### 
+
+
+PATCH http://localhost:5000/updateUser/ww@ww.ww
+Content-Type: "application/json"
+
+
+
+### 
+
+
+PATCH http://localhost:5000/userPosts/61f954607a9a4b138e37a3e1
+Content-Type: "application/json"
+
+
+### 
+
+
+PATCH http://localhost:5000/deleteUserPosts/61f954607a9a4b138e37a3e1
+Content-Type: "application/json"
+
+
+### 
+
+
+PATCH http://localhost:5000/deleteGame/61f954607a9a4b138e37a3e1
+Content-Type: "application/json"
+
+
+### 
+
+PATCH http://localhost:5000/addGame/qq@qq.qq
+Content-Type: "application/json"
+
+
+
+### 
+
+
+PATCH http://localhost:5000/updateGame/ww@ww.ww
+Content-Type: "application/json"
+
+
+### 
+
+PATCH http://localhost:5000/addBaller/61efa6cb06e44a7b127b9243
+Content-Type: "application/json"
+
+
+### 
+
+
+PATCH http://localhost:5000/removeBaller/61efa6cb06e44a7b127b9243
+Content-Type: "application/json"
+
+
+### 
+
+
+GET http://localhost:5000/posts
+
+
+### 
+
+
+GET http://localhost:5000/posts/TEmdIbg9f8Vt0ErEi0pZmtMPDHD3
+
+
+### 
+
+
+POST http://localhost:5000/addPost
+Content-Type: "application/json"
+
+
+### 
+
+
+PATCH http://localhost:5000/editPost/61f3d2274b06b78a88882861
+Content-Type: "application/json"
+
+
+### 
+
+
+DELETE  http://localhost:5000/deletePost/61f3c3e486c10dee0f8bb96d
+
+
+### 
+
+
+PATCH http://localhost:5000/updateBall/61f3d2274b06b78a88882861
+Content-Type: "application/json"
+
+
+### 
+
+
+PATCH http://localhost:5000/addComment/61f429d99d795709df1dbdbf
+Content-Type: "application/json"
+
+
+### 
+
+
+PATCH http://localhost:5000/updateComment/61f68d00d9dd595faad71cc3
+Content-Type: "application/json"
+
+
+### 
+
+
+PATCH http://localhost:5000/deleteComment/61f68d00d9dd595faad71cc3
+Content-Type: "application/json"
+
+
+### 

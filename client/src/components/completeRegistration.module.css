@@ -1,0 +1,86 @@
+.completeRegistration{
+    position: relative;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
+}
+
+.completeRegistration img{
+    position: absolute;
+    top: 0%;
+    left: 0%;
+    width: 100%;
+    height: 100%;
+    z-index: -2;
+}
+
+.completeRegistration form{
+    height: 90%;
+    width: 35%;
+    margin-left: 32.5%;
+    font-weight: 550;
+    box-shadow: 0px 0px 8px 2px white;
+    border-radius: 4px;
+    background-color: white;
+}
+
+.completeRegistration button{
+    width: 20%;
+    padding: 3px;
+    font-size: medium;
+    border-radius: 4px;
+    border: 2.5px solid black;
+    background-color: rgba(240, 248, 255, 0);
+    cursor: pointer;
+}
+
+.completeRegistration input{
+    width: 35%;
+    font-weight: 550;
+    border-radius: 4px;
+    border: 1px inset black;
+    padding: 3px;
+}
+
+@media screen and (max-width:1024px) {
+    .completeRegistration form{
+        height: 70%;
+        width: 40%;
+        margin-left: 30%;
+    }
+    .completeRegistration button{
+        width: 35%;
+    }
+    .completeRegistration input{
+        width: 40%;
+    }
+  }
+
+  @media screen and (max-width:768px) {
+    .completeRegistration form{
+        height: 70%;
+        width: 60%;
+        margin-left: 20%;
+    }
+    .completeRegistration button{
+        width: 35%;
+    }
+    .completeRegistration input{
+        width: 45%;
+    }
+  }
+
+@media screen and (max-width:425px) {
+    .completeRegistration form{
+        height: 70%;
+        width: 70%;
+        margin-left: 15%;
+    }
+    .completeRegistration button{
+        width: 35%;
+    }
+    .completeRegistration input{
+        width: 50%;
+    }
+  }
