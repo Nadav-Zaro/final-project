@@ -7,7 +7,7 @@ const {getUser,addUser,updateUser,getUserByEmail,addGame,updateGame,addBaller,
 const {showPosts,getPostByEmail,addPost,updatePost,deletePost,updateBall,addComment,updateComment,deleteComment} = require("./utils/postsFunctions")
 const {getGames} = require("./utils/getGames")
 const {getTeamsStanding} = require("./utils/getTeamsStanding")
-app.use(express.json());
+app.use(express.json()); 
 
 
 // getTeamsStanding()

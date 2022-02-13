@@ -116,7 +116,6 @@ function App() {
             setIsRedirectView(false);
             setIsRedirectEdit(false)
             localStorage.setItem(STORAGE_KEY,null)
-            // localStorage.setItem(STORAGE_KEY2,null)
             setAuth(null);
             setUserInfo(null)
           }} className='option'>
