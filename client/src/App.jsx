@@ -75,7 +75,7 @@ function App() {
   return (
     <BrowserRouter>
     <div className="App">
-   {auth && userInfo ? <div className='nav'>
+   {auth ? <div className='nav'>
      <GiHamburgerMenu className='hamburger' onClick={()=>setIsHamburger(!isHamburger)}/>
       <div className='links' style={linksStyle}>
         <Link onClick={()=>{setIsRedirectView(false);setIsRedirectEdit(false);setIsUserOption(false);setUserdetails(null)

@@ -7,7 +7,14 @@ import axios from 'axios';
 import GetYesterdayGames from '../components/GetYesterdayGames';
 
 export default function Games_to_watch({auth,isRedirectEdit,isRedirectView,games,setGames,setUserInfo,userInfo,setOnline}) {
-useEffect(()=>{getUser();updateData()}, []);
+useEffect(()=>{
+  if (auth) {
+   return getUser() 
+  }
+  if (userInfo) {
+    return updateData()
+  }
+}, [userInfo]);
 if (!auth) {
   return <Redirect to="/"/>
 }
@@ -18,18 +25,19 @@ if (isRedirectView) {
   return <Redirect to="/ViewProfile"/>
 }
 
-const url = "/UserDetails"
-
 function getUser() {
   let usersOnline = []
   if (auth) {
-    axios.get(url)
+    axios.get("/UserDetails")
     .then(res=>{
+      console.log(res.data);
       for (let i = 0; i < res.data.length; i++) {
-        if (res.data[i].isLogin) {
+          if (res.data[i].isLogin) {
+          console.log(res.data[i]);
           usersOnline.push(res.data[i])
         }
         if (res.data[i].email === auth.email) {
+          console.log(res.data[i]);
           let obj = {...res.data[i]}
           obj.isLogin = true
           setUserInfo(obj)

@@ -81,18 +81,18 @@ export default function Posts({auth,isRedirectEdit,isRedirectView,userInfo,userd
     <div className={style.posts}>
       <div className={style.profile}>
         <div className={style.profileImg}>
-          <img src={userInfo.photo ? userInfo.photo : "https://th.bing.com/th/id/R.f29406735baf0861647a78ae9c4bf5af?rik=GKTBhov2iZge9Q&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_206976.png&ehk=gCH45Zmryw3yqyqG%2fhd8WDQ53zwYfmC8K9OIkNHP%2fNU%3d&risl=&pid=ImgRaw&r=0"} />
+          <img src={userInfo?.photo ? userInfo?.photo : "https://th.bing.com/th/id/R.f29406735baf0861647a78ae9c4bf5af?rik=GKTBhov2iZge9Q&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_206976.png&ehk=gCH45Zmryw3yqyqG%2fhd8WDQ53zwYfmC8K9OIkNHP%2fNU%3d&risl=&pid=ImgRaw&r=0"} />
         </div>
-          <p>User: {userInfo.user}</p>
-          <p>Name: {userInfo.firstName}</p>
-          <p>City: {userInfo.city}</p>
-          <p>Team: {userInfo.team}</p>
-          <p>ballers: {userInfo.ballers.length}</p>
+          <p>User: {userInfo?.user}</p>
+          <p>Name: {userInfo?.firstName}</p>
+          <p>City: {userInfo?.city}</p>
+          <p>Team: {userInfo?.team}</p>
+          <p>ballers: {userInfo?.ballers?.length}</p>
       </div>
     <div className={style.allPosts}>
     <div className={style.post}>
       <div className={style.postImg}>
-          <img src={userInfo.photo ? userInfo.photo : "https://th.bing.com/th/id/R.f29406735baf0861647a78ae9c4bf5af?rik=GKTBhov2iZge9Q&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_206976.png&ehk=gCH45Zmryw3yqyqG%2fhd8WDQ53zwYfmC8K9OIkNHP%2fNU%3d&risl=&pid=ImgRaw&r=0"} />
+          <img src={userInfo?.photo ? userInfo?.photo : "https://th.bing.com/th/id/R.f29406735baf0861647a78ae9c4bf5af?rik=GKTBhov2iZge9Q&riu=http%3a%2f%2fcdn.onlinewebfonts.com%2fsvg%2fimg_206976.png&ehk=gCH45Zmryw3yqyqG%2fhd8WDQ53zwYfmC8K9OIkNHP%2fNU%3d&risl=&pid=ImgRaw&r=0"} />
       </div>
       <form className={style.postForm} onSubmit={(e)=>{
         e.preventDefault()

@@ -38,20 +38,20 @@ const fileUploadHandler = ()=>{
 
 function setUser() {
   let obj = {
-      id:userInfo.id,
+      id:userInfo?.id,
       user:user.current.value,
-      email:userInfo.email,
+      email:userInfo?.email,
       firstName:firstName.current.value,
       lastName:lastName.current.value,
       city:city.current.value,
       age:age.current.value,
       team:team.current.value,
-      posts:userInfo.posts,
-      ballers:userInfo.ballers,
-      photo:fileLink ? fileLink : userInfo.photo,
-      games:userInfo.games,
-      join: userInfo.join,
-      isLogin:userInfo.isLogin
+      posts:userInfo?.posts,
+      ballers:userInfo?.ballers,
+      photo:fileLink ? fileLink : userInfo?.photo,
+      games:userInfo?.games,
+      join: userInfo?.join,
+      isLogin:userInfo?.isLogin
   }
   editUserServer(obj)
   setUserInfo(obj)
@@ -62,7 +62,7 @@ function updatePassword() {
       idToken:auth.idToken,
       password: password.current.value
   })
-  .then(res=>{console.log(res)})
+  .then(res=>{console.log(res.data)})
   .catch(err=>console.log(err.response))
   }
 
@@ -85,17 +85,17 @@ return <Redirect to="/ViewProfile"/>
             setUser()
           }}>
         <label>User</label><br/>    
-        <input ref={user} type="text" defaultValue={userInfo.user}/><br/>
+        <input ref={user} type="text" defaultValue={userInfo?.user}/><br/>
         <label>First Name</label><br/>
-        <input ref={firstName} type="text" defaultValue={userInfo.firstName}/><br/>
+        <input ref={firstName} type="text" defaultValue={userInfo?.firstName}/><br/>
         <label>Last Name</label><br/>
-        <input ref={lastName} type="text" defaultValue={userInfo.lastName}/><br/>
+        <input ref={lastName} type="text" defaultValue={userInfo?.lastName}/><br/>
         <label>City</label><br/>
-        <input ref={city} type="text" defaultValue={userInfo.city}/><br/>
+        <input ref={city} type="text" defaultValue={userInfo?.city}/><br/>
         <label>Age</label><br/>
-        <input ref={age} type="number" defaultValue={userInfo.age}/><br/>
+        <input ref={age} type="number" defaultValue={userInfo?.age}/><br/>
         <label>Team</label><br/>
-        <input ref={team} type="text" defaultValue={userInfo.team}/><br/>
+        <input ref={team} type="text" defaultValue={userInfo?.team}/><br/>
         <label>Photo</label><br/>
         <input type="file" onChange={fileSelectHandler}/>
         <input onClick={fileUploadHandler} defaultValue="Upload"/><br/>
@@ -106,7 +106,7 @@ return <Redirect to="/ViewProfile"/>
           updatePassword()
           }}>
         <label>User</label><br/>    
-        <input ref={user} type="text" defaultValue={userInfo.user}/><br/>
+        <input ref={user} type="text" defaultValue={userInfo?.user}/><br/>
         <label>Password</label><br/>
         <input ref={password} type="password"/><br/>
         <label>Confirm Password</label><br/>

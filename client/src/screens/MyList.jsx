@@ -29,7 +29,7 @@ let userGames = {...userInfo}
         <img src="https://th.bing.com/th/id/R.44422f22359275e792d667a45512e32a?rik=l4LsIrOHxNLDMg&riu=http%3a%2f%2fgetwallpapers.com%2fwallpaper%2ffull%2fd%2fd%2f0%2f1438088-vertical-nba-wallpapers-hd-1920x1080.jpg&ehk=CY3k2RgFgvptZcOBw1zkN1foONSyra9v5BXFo5sN11A%3d&risl=&pid=ImgRaw&r=0" />
         <h1>Your Private Live NBA Streaming</h1>
       </div>
-      {userGames.games.length ? <div className={style.screens}>
+      {userGames.games?.length ? <div className={style.screens}>
         <div className={style.list}>
           <p onClick={()=>{setIsAllGames(true);setIsAlreadyWatch(false);setIsFavorites(false);}}><FaTv/> All Games</p>
           <p onClick={()=>{setIsAllGames(false);setIsAlreadyWatch(true);setIsFavorites(false);}}><FaCheck/> Already Watch</p>
@@ -41,7 +41,7 @@ let userGames = {...userInfo}
           {isFavorites ? <Favorites  setUserInfo={setUserInfo} userInfo={userInfo}/> : ""}
         </div>
       </div> : <div className={style.emptyList}>
-        <h1>Hi, {userInfo.user ? userInfo.user : userInfo.email}</h1>
+        <h1>Hi, {userInfo?.user ? userInfo?.user : userInfo?.email}</h1>
         <h4>It Appears Your Watching List Empty..</h4>
         <p>Go Back Home To Add Games To Your List !</p>
         </div>}

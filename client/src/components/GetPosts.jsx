@@ -62,7 +62,7 @@ export default function GetPosts({posts,setPosts,userInfo,getPosts,setUserdetail
     }
 
     function isUserOnline(match) {
-      for (let i = 0; i < online.length; i++) {
+      for (let i = 0; i < online?.length; i++) {
         if (online[i].id === match.id) {
           return true
         }
@@ -92,7 +92,7 @@ export default function GetPosts({posts,setPosts,userInfo,getPosts,setUserdetail
             <p>{it.date}</p>
             <p>{it.team}</p>
           </div>
-            {userInfo.email === it.email ? <div className={style.editPost}>
+            {userInfo?.email === it.email ? <div className={style.editPost}>
               <FaPencilAlt title="Edit" onClick={()=>{setIsEditPost(true);it.edit = true}}/> 
               <FaMinus title="Delete" onClick={()=>{
                 deletePost(it.id);
@@ -121,9 +121,9 @@ export default function GetPosts({posts,setPosts,userInfo,getPosts,setUserdetail
                 updatePost(it.id,{ball:it.ball})
                 setPosts(temp)
               }
-            }} style={{cursor:"pointer"}}/> {it.ball.length}
+            }} style={{cursor:"pointer"}}/> {it.ball?.length}
             <button onClick={()=>{it.comment = true;setPosts(temp)}}>Comment</button>
-            {it.comments.length ? <FaAngleDown title="Comments" style={{cursor:"pointer"}} onClick={()=>{it.seeComments = true;setPosts(temp)}}/> : ""}
+            {it.comments?.length ? <FaAngleDown title="Comments" style={{cursor:"pointer"}} onClick={()=>{it.seeComments = true;setPosts(temp)}}/> : ""}
           </div>
           {it.comment ? <form className={style.commentForm} onSubmit={(e)=>{
             e.preventDefault()
@@ -137,7 +137,7 @@ export default function GetPosts({posts,setPosts,userInfo,getPosts,setUserdetail
           </form> : ""}
         </div>  
         <div className={style.commentsHolder}>
-        {it.seeComments && it.comments.length ? it.comments.map((com,j)=>{
+        {it.seeComments && it.comments?.length ? it.comments.map((com,j)=>{
           return(
           <div key={j} className={style.comments}>
           <div className={style.commentsImg}>
@@ -177,7 +177,7 @@ export default function GetPosts({posts,setPosts,userInfo,getPosts,setUserdetail
           </div>
         </div>
         )}): ""}
-          {it.comments.length ? <FaAngleUp title="Close" style={{cursor:"pointer"}} onClick={()=>{it.seeComments = false;setPosts(temp)}}/> : ""}
+          {it.comments?.length ? <FaAngleUp title="Close" style={{cursor:"pointer"}} onClick={()=>{it.seeComments = false;setPosts(temp)}}/> : ""}
         </div>
       </div>
       )}) : ""
