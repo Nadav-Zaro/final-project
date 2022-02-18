@@ -1,6 +1,5 @@
 const express = require("express");
 require("dotenv").config()
-const fs = require("fs")
 const app = express();
 const {getUser,addUser,updateUser,getUserByEmail,addGame,updateGame,addBaller,
   removeBaller,addUserPost,deleteGame,deleteUserPost,sendMessage,updateMessage} = require("./utils/userFunctions")
