@@ -7,14 +7,7 @@ import axios from 'axios';
 import GetYesterdayGames from '../components/GetYesterdayGames';
 
 export default function Games_to_watch({auth,isRedirectEdit,isRedirectView,games,setGames,setUserInfo,userInfo,setOnline}) {
-useEffect(()=>{
-  if (auth) {
-   return getUser() 
-  }
-  if (userInfo) {
-    return updateData()
-  }
-}, [userInfo]);
+useEffect(()=>{getUser();updateData()}, []);
 if (!auth) {
   return <Redirect to="/"/>
 }
@@ -25,19 +18,17 @@ if (isRedirectView) {
   return <Redirect to="/ViewProfile"/>
 }
 
+const url = "/UserDetails"
+
 function getUser() {
   let usersOnline = []
-  if (auth) {
-    axios.get("/UserDetails")
-    .then(res=>{
-      console.log(res.data);
+    axios.get(url)
+    .then(res=>{console.log(res);
       for (let i = 0; i < res.data.length; i++) {
-          if (res.data[i].isLogin) {
-          console.log(res.data[i]);
+        if (res.data[i].isLogin) {
           usersOnline.push(res.data[i])
         }
         if (res.data[i].email === auth.email) {
-          console.log(res.data[i]);
           let obj = {...res.data[i]}
           obj.isLogin = true
           setUserInfo(obj)
@@ -45,15 +36,14 @@ function getUser() {
       }
       setOnline(usersOnline)
   })
-    .catch(err=>console.log(err.response))
-  }
+    .catch(err=>console.log(err))
 }
 
 function updateData() {
   if (auth) {
      axios.patch(`/updateUser/${auth.email}`,{isLogin:true})
-    .then(res=>console.log(res.data))
-    .catch(err=>console.log(err.response))
+    .then(res=>console.log(res))
+    .catch(err=>console.log(err))
   }
    
 }

@@ -6,20 +6,16 @@ const mongoDB = require("mongodb"),
 
     
 module.exports.getUser = (res)=> {
-//   res.send(mongoURL);
-
 MongoClient.connect(mongoURL)
     .then((db) => {
         const dbo = db.db(dbName)
         dbo.collection(userColl).find({}).toArray()
             .then(docs => {
-                // res.send("success");
                 res.send(docs)
                 db.close()
             })
     })
     .catch((err) => {
-        res.send("err");
         throw err
     })
 }
