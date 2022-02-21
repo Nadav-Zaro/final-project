@@ -1,7 +1,7 @@
-const axios = require("axios")
-const puppeteer = require("puppeteer")
-const fs = require("fs/promises");
-const moment = require("moment")
+import axios from "axios"
+import puppeteer from "puppeteer"
+import fs from "fs/promises"
+import moment from "moment"
 
 async function getTeamsStanding() {
     const browser = await puppeteer.launch()
@@ -42,4 +42,4 @@ async function getTeamsStanding() {
     await browser.close()
 }
 
-module.exports = { getTeamsStanding }
+export  { getTeamsStanding }

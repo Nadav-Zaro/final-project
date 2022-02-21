@@ -1,15 +1,19 @@
-const express = require("express");
-require("dotenv").config()
+import express from "express";
+import dotenv from "dotenv";
+dotenv.config();
+import path from "path"; 
+import { fileURLToPath } from 'url';
+const __filename = fileURLToPath(import.meta.url);
+
+const __dirname = path.dirname(__filename);
 const app = express();
-const {getUser,addUser,updateUser,getUserByEmail,addGame,updateGame,addBaller,
-  removeBaller,addUserPost,deleteGame,deleteUserPost,sendMessage,updateMessage} = require("./utils/userFunctions.js")
-  const {showPosts,getPostByEmail,addPost,updatePost,deletePost,updateBall,addComment,updateComment,deleteComment} = require("./utils/postsFunctions.js")
-  const {getGames} = require("./utils/getGames.js")
-  const {getTeamsStanding} = require("./utils/getTeamsStanding.js")
+import {getUser,addUser,updateUser,getUserByEmail,addGame,updateGame,addBaller,
+  removeBaller,addUserPost,deleteGame,deleteUserPost,sendMessage,updateMessage} from "./utils/userFunctions.js"
+  import {showPosts,getPostByEmail,addPost,updatePost,deletePost,updateBall,addComment,updateComment,deleteComment} from "./utils/postsFunctions.js"
+  import {getGames} from "./utils/getGames.js"
+  import {getTeamsStanding} from "./utils/getTeamsStanding.js"
   app.use(express.json()); 
   
-  // const favicon = require('express-favicon')
-  // app.use(favicon(__dirname + '/client/public/favicon.png'))
 // getTeamsStanding()
 // setInterval(() => {
   // getGames()
@@ -17,7 +21,7 @@ const {getUser,addUser,updateUser,getUserByEmail,addGame,updateGame,addBaller,
 
 // user  
 app.get("/UserDetails", (req, res) => {
-  getUser(res)
+  getUser(req,res)
 });
 
 app.get("/UserDetails/:id", (req,res)=>{
@@ -105,6 +109,12 @@ app.patch("/updateComment/:id", (req, res) => {
 app.patch("/deleteComment/:id", (req, res) => {
   deleteComment(req,res)
 });
+
+app.use(express.static(path.join(__dirname, "client", "build")));
+app.get("*", (req, resp) => {
+  resp.sendFile(path.join(__dirname, "client", "build", "index.html"));
+});
+
 
 const PORT = process.env.PORT;
 app.listen(PORT, () => {

@@ -1,11 +1,13 @@
-const mongoDB = require("mongodb"),
-    MongoClient = mongoDB.MongoClient,
+import mongoDB from "mongodb"
+import dotenv from "dotenv";
+dotenv.config();
+    const MongoClient = mongoDB.MongoClient,
     mongoURL = process.env.MONGOURL,
-    dbName = "Ballers_Court";
+    dbName = "Ballers_Court",
     postsColl = "posts";
 
 
-module.exports.showPosts = (req,res)=> {
+const showPosts = (req,res)=> {
     MongoClient.connect(mongoURL)
         .then((db) => {
             const dbo = db.db(dbName)
@@ -22,7 +24,7 @@ module.exports.showPosts = (req,res)=> {
         })
 }
 
-module.exports.getPostByEmail = (req, res)=> {
+const getPostByEmail = (req, res)=> {
     MongoClient.connect(mongoURL)
         .then((db) => {
             const email = {email:req.params.email}
@@ -35,7 +37,7 @@ module.exports.getPostByEmail = (req, res)=> {
         })
 }
 
-module.exports.addPost = (req,res)=> {
+const addPost = (req,res)=> {
     let user = req.body
     MongoClient.connect(mongoURL)
         .then((db) => {
@@ -54,7 +56,7 @@ module.exports.addPost = (req,res)=> {
         })
 }    
 
-module.exports.updatePost = (req, res)=> {
+const updatePost = (req, res)=> {
     const id = { id: req.params.id}
     if (id == undefined) {
         return res.sendStatus(400)
@@ -76,7 +78,7 @@ module.exports.updatePost = (req, res)=> {
         })
 }
 
-module.exports.updateBall = (req, res)=> {
+const updateBall = (req, res)=> {
     const id = { id: req.params.id}
     const upDoc = Number(req.body)
     if (id == undefined) {
@@ -98,7 +100,7 @@ module.exports.updateBall = (req, res)=> {
         })
 }
 
-module.exports.deletePost=(req, res)=> {
+const deletePost=(req, res)=> {
     const id = { id: req.params.id}
     if (id == undefined) {
         return res.sendStatus(400)
@@ -116,7 +118,7 @@ module.exports.deletePost=(req, res)=> {
         })
 }
 
-module.exports.addComment = (req, res)=> {
+const addComment = (req, res)=> {
     const id = { id: req.params.id}
     if (id == undefined) {
         return res.sendStatus(400)
@@ -137,7 +139,7 @@ module.exports.addComment = (req, res)=> {
         })
 }
 
-module.exports.updateComment = (req, res)=> {
+const updateComment = (req, res)=> {
     const id = { id: req.params.id}
     if (id == undefined) {
         return res.sendStatus(400)
@@ -158,7 +160,7 @@ module.exports.updateComment = (req, res)=> {
         })
 }
 
-module.exports.deleteComment = (req, res)=> {
+const deleteComment = (req, res)=> {
     const id = { id: req.params.id}
     if (id == undefined) {
         return res.sendStatus(400)
@@ -177,4 +179,8 @@ module.exports.deleteComment = (req, res)=> {
         .catch((err) => {
             throw err.response
         })
+}
+
+export {
+    showPosts,getPostByEmail,addPost,updatePost,updateBall,deletePost,addComment,updateComment,deleteComment
 }

@@ -1,7 +1,7 @@
-const axios = require("axios")
-const puppeteer = require("puppeteer")
-const fs = require("fs/promises");
-const moment = require("moment")
+import axios from "axios"
+import puppeteer from "puppeteer"
+import fs from "fs/promises"
+import moment from "moment"
 
 async function getGames() {
   let day = moment().subtract(2, "days").format("YYYY-MM-DD")
@@ -299,4 +299,4 @@ async function getGames() {
   await browser.close()
 }
 
-module.exports = { getGames }
+export { getGames }
