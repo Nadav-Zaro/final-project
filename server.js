@@ -2,13 +2,14 @@ const express = require("express");
 require("dotenv").config()
 const app = express();
 const {getUser,addUser,updateUser,getUserByEmail,addGame,updateGame,addBaller,
-  removeBaller,addUserPost,deleteGame,deleteUserPost,sendMessage,updateMessage} = require("./utils/userFunctions")
-  const {showPosts,getPostByEmail,addPost,updatePost,deletePost,updateBall,addComment,updateComment,deleteComment} = require("./utils/postsFunctions")
-  const {getGames} = require("./utils/getGames")
-  const {getTeamsStanding} = require("./utils/getTeamsStanding")
+  removeBaller,addUserPost,deleteGame,deleteUserPost,sendMessage,updateMessage} = require("./utils/userFunctions.js")
+  const {showPosts,getPostByEmail,addPost,updatePost,deletePost,updateBall,addComment,updateComment,deleteComment} = require("./utils/postsFunctions.js")
+  const {getGames} = require("./utils/getGames.js")
+  const {getTeamsStanding} = require("./utils/getTeamsStanding.js")
   app.use(express.json()); 
-  const favicon = require('express-favicon')
-  app.use(favicon(__dirname + '/client/public/favicon.png'))
+  
+  // const favicon = require('express-favicon')
+  // app.use(favicon(__dirname + '/client/public/favicon.png'))
 // getTeamsStanding()
 // setInterval(() => {
   // getGames()
