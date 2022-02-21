@@ -23,7 +23,7 @@ const url = "/UserDetails"
 function getUser() {
   let usersOnline = []
     axios.get(url)
-    .then(res=>{console.log(res);
+    .then(res=>{
       for (let i = 0; i < res.data.length; i++) {
         if (res.data[i].isLogin) {
           usersOnline.push(res.data[i])
@@ -42,8 +42,8 @@ function getUser() {
 function updateData() {
   if (auth) {
      axios.patch(`/updateUser/${auth.email}`,{isLogin:true})
-    .then(res=>console.log(res))
-    .catch(err=>console.log(err))
+    // .then(res=>console.log(res))
+    // .catch(err=>console.log(err))
   }
    
 }

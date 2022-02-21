@@ -104,7 +104,7 @@ export default function ViewProfile({
   }
 
   function sendNewMessage(obj) {
-    console.log(obj);
+    // console.log(obj);
     let singleMessage = {
       userId: usertemp.id,
       user: usertemp.user,
@@ -125,7 +125,7 @@ export default function ViewProfile({
   }
 
   function sendedNewMessage(user) {
-    console.log(user);
+    // console.log(user);
     let singleMessage = {
       userId: user.id,
       user: user.user,
@@ -167,7 +167,7 @@ export default function ViewProfile({
       .catch((err) => console.log(err.response));
   }
 
-  let postsLists = posts ? [...posts] : null;
+  let postsLists = [...posts] ;
   const postsElement = postsLists
     ? postsLists.map((it, i) => {
         if (it.email === auth.email) {
