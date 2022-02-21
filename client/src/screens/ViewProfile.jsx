@@ -167,9 +167,9 @@ export default function ViewProfile({
       .catch((err) => console.log(err.response));
   }
 
-  let postsLists = [...posts] ;
+  let postsLists =posts? [...posts] : null;
   const postsElement = postsLists
-    ? postsLists.map((it, i) => {
+    ? postsLists?.map((it, i) => {
         if (it.email === auth.email) {
           return (
             <div key={i} className={style.post}>

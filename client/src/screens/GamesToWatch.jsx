@@ -37,14 +37,11 @@ export default function Games_to_watch({
     axios
       .get(url)
       .then((res) => {
-        console.log(res.data);
         for (let i = 0; i < res.data.length; i++) {
           if (res.data[i].isLogin) {
-            console.log(res.data[i]);
             usersOnline.push(res.data[i]);
           }
           if (res.data[i].email === auth.email) {
-            console.log(res.data[i]);
             let obj = { ...res.data[i] };
             obj.isLogin = true;
             setUserInfo(obj);
