@@ -8,7 +8,7 @@ const {getUser,addUser,updateUser,getUserByEmail,addGame,updateGame,addBaller,
   const {getTeamsStanding} = require("./utils/getTeamsStanding")
   app.use(express.json()); 
   const favicon = require('express-favicon')
-  app.use(favicon(__dirname + '/client/public/favicon.ico'))
+  app.use(favicon(__dirname + '/client/public/favicon.png'))
 // getTeamsStanding()
 // setInterval(() => {
   // getGames()
